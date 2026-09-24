@@ -1,0 +1,54 @@
+{
+  "name": "nestjs-tronweb-example",
+  "version": "0.1.0",
+  "description": "Production-oriented NestJS example: injectable TronWeb plus TRC-20 balanceOf and transfer helpers.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "ERROR_HANDLING.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pretest": "npm run build",
+    "test": "node --test test/**/*.test.js",
+    "prestart:example": "npm run build",
+    "start:example": "node dist/example/main.js",
+    "start:example:ts": "ts-node src/example/main.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramioo-labs/nestjs-tronweb-example.git"
+  },
+  "keywords": [
+    "nestjs",
+    "tron",
+    "tronweb",
+    "trc20"
+  ],
+  "dependencies": {
+    "tronweb": "^6.5.0"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "^10.0.0 || ^11.0.0",
+    "@nestjs/core": "^10.0.0 || ^11.0.0",
+    "reflect-metadata": "^0.2.0",
+    "rxjs": "^7.8.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@types/node": "^22.19.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  }
+}
